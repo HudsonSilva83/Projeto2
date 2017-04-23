@@ -19,10 +19,10 @@ WebDriverWait wait = new WebDriverWait(driver, 10);
 		IniciarNavegador();
 		
 		Actions actions = new Actions(driver);
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("a[href*='pregao']")));
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(".//*[@id='mPrincipal']/div/ul/li[2]")));
 		driver.findElement(By.xpath(".//*[@id='mPrincipal']/div/ul/li[2]"));
-		WebElement BtPregao = driver.findElement(By.cssSelector("a[href*='pregao']"));
-		actions.moveToElement(BtPregao);
+		WebElement BtPregao = driver.findElement(By.xpath(".//*[@id='mPrincipal']/div/ul/li[2]"));
+		actions.moveToElement(BtPregao).perform();
 
 	}
 
