@@ -12,23 +12,33 @@ import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
 
 public class Pesquisar extends BaseDriver {
-WebDriverWait wait = new WebDriverWait(driver, 10);
+
 	
 	@Dado("^O sistema apresenta os campos para preenchimento$")
 	public void o_sistema_apresenta_os_campos_para_preenchimento() {
 		IniciarNavegador();
 		
 		Actions actions = new Actions(driver);
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(".//*[@id='mPrincipal']/div/ul/li[2]")));
-		driver.findElement(By.xpath(".//*[@id='mPrincipal']/div/ul/li[2]"));
+		
 		WebElement BtPregao = driver.findElement(By.xpath(".//*[@id='mPrincipal']/div/ul/li[2]"));
-		actions.moveToElement(BtPregao).perform();
+		actions.moveToElement(BtPregao).build().perform();
+		
+		WebElement BtConsulta = driver.findElement(By.xpath(".//*[@id='mPrincipal']/div/ul/li[2]/ul/li[1]/a/span"));
+		actions.moveToElement(BtConsulta).click().build().perform();
 
 	}
 
 	@Dado("^Apos Preencher/Selecionar todos os campos$")
 	public void apos_Preencher_Selecionar_todos_os_campos() {
-
+		
+		WebElement ProcCompra = driver.findElement(By.id("numeroProcessoCompra"));
+       ProcCompra.sendKeys("sdsd");
+       
+       WebElement AnoProc = driver.findElement(By.id("anoProcessoCompra"));
+       AnoProc.sendKeys("");
+       
+       
+       
 	}
 
 	@Quando("^Aciono o comando de pesquisa$")
