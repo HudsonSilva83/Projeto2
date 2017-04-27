@@ -3,13 +3,11 @@ package Step_Definitions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
+import junit.framework.Assert;
 
 public class Pesquisar extends BaseDriver {
 
@@ -48,6 +46,9 @@ public class Pesquisar extends BaseDriver {
 
 	@Entao("^É Apresentado o resultado conforme solicitado$")
 	public void é_Apresentado_o_resultado_conforme_solicitado() {
+		
+		
+		
 
 	}
 

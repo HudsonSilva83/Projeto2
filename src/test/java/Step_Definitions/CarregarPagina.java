@@ -2,6 +2,7 @@ package Step_Definitions;
 
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
+import junit.framework.Assert;
 
 public class CarregarPagina extends BaseDriver {
 
@@ -16,6 +17,7 @@ public class CarregarPagina extends BaseDriver {
 	public void a_Pagina_e_apresentada_com_sucesso() {
 		
 		System.out.println("Pagina é carregada com sucesso");
+		
 	    
 	}
 
