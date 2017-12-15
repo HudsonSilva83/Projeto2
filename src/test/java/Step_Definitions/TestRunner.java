@@ -11,6 +11,6 @@ import cucumber.api.junit.Cucumber;
 		features="src/test/resources",
 		glue= {"Step_Definitions"})
 
-public class TestRunner {
+public class TestRunner { 
 
 }
